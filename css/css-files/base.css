@@ -1,0 +1,138 @@
+/* ============================================================
+   ALI RAZA — FRONTEND DEVELOPER PORTFOLIO
+   Original CSS — no framework
+   ============================================================ */
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Colors — Dark Mode (default) */
+  --bg-base: #0a0e1a;
+  --bg-panel: #12172a;
+  --bg-panel-alt: #161d33;
+  --bg-elevated: #1a2138;
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --text-primary: #e8eaf2;
+  --text-secondary: #9aa1b8;
+  --text-muted: #6b7390;
+
+  --accent-blue: #4f6bff;
+  --accent-purple: #8b5cf6;
+  --accent-mint: #34d399;
+  --accent-gradient: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+  --accent-gradient-soft: linear-gradient(135deg, rgba(79, 107, 255, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+
+  --shadow-glow: 0 0 60px rgba(79, 107, 255, 0.25);
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container-width: 1240px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] {
+  --bg-base: #f6f7fb;
+  --bg-panel: #ffffff;
+  --bg-panel-alt: #eef0f8;
+  --bg-elevated: #ffffff;
+  --border-soft: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
+
+  --text-primary: #161a2c;
+  --text-secondary: #525a78;
+  --text-muted: #888fa8;
+
+  --shadow-card: 0 10px 40px rgba(30, 41, 90, 0.08);
+  --shadow-elevated: 0 20px 60px rgba(30, 41, 90, 0.12);
+}
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+::selection {
+  background: var(--accent-blue);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

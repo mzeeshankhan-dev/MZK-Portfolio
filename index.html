@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeeshan Khan — Frontend Developer</title>
+
+  <meta name="description"
+    content="M Zeeshan Khan is a Frontend Developer building fast, modern, fully responsive websites with HTML, CSS, JavaScript and Tailwind CSS. Available for freelance projects on Fiverr and Upwork.">
+  <meta name="keywords"
+    content="frontend developer, responsive website, landing page, portfolio, freelancer, HTML CSS JavaScript">
+  <meta property="og:title" content="M Zeeshan Khan — Frontend Developer">
+  <meta property="og:description" content="I build modern & responsive websites.">
+  <meta property="og:type" content="website">
+  <meta name="author" content="M Zeeshan Khan">
+  <meta property="og:image" content="images/preview.jpg">
+  <!-- ============ Google Font CDN ===========-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- ============ Remix Icon CDN =============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <!-- ============ Link Style.css ============= -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!--Top Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Open Loading Animation -->
+  <div class="loader" id="loader">
+    <div class="loader-mark">
+      <span class="loader-bracket">&lt;</span>
+      <span class="loader-slash">/</span>
+      <span class="loader-bracket">&gt;</span>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER / NAVBAR  SECTION ===================== -->
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+
+      <!-- logo -->
+      <a href="#home" class="logo">
+        <span class="logo-mark">ZK</span>
+        <span class="logo-text">Zeeshan Khan</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+          <i class="ri-sun-line theme-icon-light"></i>
+          <i class="ri-moon-line theme-icon-dark"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Hire Me</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#testimonials" class="mobile-link">Testimonials</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#contact" class="btn btn-primary mobile-cta">Hire Me</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO SECTION ===================== -->
+
+    <section class="hero" id="home">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <span class="badge fade-in-up">
+            <i class="ri-code-s-slash-line"></i> Frontend Developer
+          </span>
+
+          <h1 class="hero-title fade-in-up" style="--delay:0.1s">
+            I Build <span class="text-gradient">Modern &amp;</span><br>
+            <span class="typing-wrap">Responsive <br> <span class="typed" id="typedText"></span>
+              <span class="cursor">|</span></span>
+          </h1>
+
+          <p class="hero-desc fade-in-up" style="--delay:0.2s">
+            I'm a Frontend Developer who creates clean, fast and responsive
+            websites with HTML, CSS, JavaScript — built to
+            convert visitors into clients.
+          </p>
+
+          <div class="hero-cta fade-in-up" style="--delay:0.3s">
+            <a href="#projects" class="btn btn-primary">
+              <i class="ri-eye-line"></i> View My Work
+            </a>
+            <a href="assets/zeeshan-khan-CV.pdf" class="btn btn-outline" download>
+              <i class="ri-download-line"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero-socials fade-in-up" style="--delay:0.4s">
+            <a href="https://github.com/mzeeshankhan-dev" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener"><i
+                class="ri-github-fill"></i></a>
+            <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener"><i
+                class="ri-linkedin-fill"></i></a>
+            <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener"><i
+                class="ri-facebook-fill"></i></a>
+            <a href="mailto:hellozeeshankhan.com" class="social-icon" aria-label="Email"><i
+                class="ri-mail-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-orb"></div>
+
+          <div class="hero-image-wrap fade-in-scale">
+            <div class="hero-corve"></div>
+            <img src="./assets/images/client-2-removebg-preview.png" alt="MZK, Frontend Developer" class="hero-image">
+
+            <div class="hero-dev-icon">
+              <span>
+                <i class="ri-code-s-slash-line"></i>
+              </span>
+            </div>
+
+            <div class="hero-card">
+              <div class="hero-card-name">
+                <strong>M Zeeshan Khan</strong>
+                <span>Frontend Developer</span>
+              </div>
+              <span class="status-dot"><i></i> Available for work</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-indicator">
+        <i class="ri-arrow-down-line"></i>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST SECTION ===================== -->
+    <section class="trust-section">
+      <div class="container">
+        <p class="trust-label">Technologies I Work With</p>
+      </div>
+      <div class="logo-carousel">
+        <div class="logo-track">
+          <span class="logo-item"><i class="ri-html5-fill"></i> HTML5</span>
+          <span class="logo-item"><i class="ri-css3-fill"></i> CSS3</span>
+          <span class="logo-item"><i class="ri-javascript-fill"></i> JavaScript</span>
+          <span class="logo-item"><i class="ri-water-flash-fill"></i> Tailwind CSS</span>
+          <span class="logo-item"><i class="ri-git-branch-fill"></i> Git</span>
+          <span class="logo-item"><i class="ri-github-fill"></i> GitHub</span>
+          <span class="logo-item"><i class="ri-terminal-box-fill"></i> VS Code</span>
+          <span class="logo-item"><i class="ri-pencil-ruler-2-fill"></i> Figma</span>
+          <!-- duplicate for seamless loop -->
+          <span class="logo-item"><i class="ri-html5-fill"></i> HTML5</span>
+          <span class="logo-item"><i class="ri-css3-fill"></i> CSS3</span>
+          <span class="logo-item"><i class="ri-javascript-fill"></i> JavaScript</span>
+          <span class="logo-item"><i class="ri-water-flash-fill"></i> Tailwind CSS</span>
+          <span class="logo-item"><i class="ri-git-branch-fill"></i> Git</span>
+          <span class="logo-item"><i class="ri-github-fill"></i> GitHub</span>
+          <span class="logo-item"><i class="ri-terminal-box-fill"></i> VS Code</span>
+          <span class="logo-item"><i class="ri-pencil-ruler-2-fill"></i> Figma</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-image-wrap reveal">
+          <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=900&auto=format&fit=crop"
+            alt="zeeshan working on a laptop" class="about-image">
+          <div class="about-image-glow"></div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title">I'm Muhammad Zeeshan Khan</h2>
+          <p class="about-desc">
+            I'm a passionate Frontend Developer who loves to build beautiful
+            and functional websites. I focus on writing clean, maintainable
+            code and crafting experiences that feel as good to use as they
+            look — specializing in:
+          </p>
+
+          <ul class="about-list">
+            <li><i class="ri-check-line"></i> Responsive Websites</li>
+            <li><i class="ri-check-line"></i> Landing Pages</li>
+            <li><i class="ri-check-line"></i> Business Websites</li>
+            <li><i class="ri-check-line"></i> Portfolio Websites</li>
+          </ul>
+
+          <div class="highlight-cards">
+            <div class="highlight-card">
+              <i class="ri-flashlight-fill"></i>
+              <span>Fast Delivery</span>
+            </div>
+            <div class="highlight-card">
+              <i class="ri-smartphone-line"></i>
+              <span>Responsive Design</span>
+            </div>
+            <div class="highlight-card">
+              <i class="ri-code-box-fill"></i>
+              <span>Clean Code</span>
+            </div>
+            <div class="highlight-card">
+              <i class="ri-search-eye-line"></i>
+              <span>SEO Friendly</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">More About Me</a>
+        </div>
+      </div>
+
+      <div class="stats-bar reveal">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <i class="ri-stack-line"></i>
+            <span class="stat-number" data-count="17">0</span><span class="stat-suffix">+</span>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-item">
+            <i class="ri-emotion-happy-line"></i>
+            <span class="stat-number" data-count="12">0</span><span class="stat-suffix">+</span>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-item">
+            <i class="ri-time-line"></i>
+            <span class="stat-number" data-count="1">0</span><span class="stat-suffix">+</span>
+            <p>Years of Experience</p>
+          </div>
+          <div class="stat-item">
+            <i class="ri-shield-check-line"></i>
+            <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES SECTION ===================== -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">What I Do</span>
+          <h2 class="section-title center">Services I Offer</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="ri-pages-line"></i></div>
+            <h3>Landing Page Development</h3>
+            <p>High-converting landing pages designed to turn visitors into customers, built fast and pixel-perfect.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="ri-user-3-line"></i></div>
+            <h3>Portfolio Website Development</h3>
+            <p>Personal portfolios that showcase your work with a clean, modern, memorable design.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="ri-building-4-line"></i></div>
+            <h3>Business Website Development</h3>
+            <p>Professional websites that establish trust and help small businesses grow online.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="ri-refresh-line"></i></div>
+            <h3>Website Redesign</h3>
+            <p>I modernize outdated websites with a fresh look, better UX, and improved performance.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="ri-smartphone-line"></i></div>
+            <h3>Responsive Website Conversion</h3>
+            <p>Turning non-responsive sites into fully mobile-friendly experiences across every device.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="ri-pencil-ruler-2-line"></i></div>
+            <h3>Figma to HTML Conversion</h3>
+            <p>Pixel-accurate conversion of your Figma designs into clean, semantic, production-ready code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS SECTION ===================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">My Skills</span>
+          <h2 class="section-title center">Skills &amp; Technologies</h2>
+        </div>
+
+        <div class="skills-columns">
+          <div class="skills-col reveal">
+            <h4 class="skills-col-title">Frontend</h4>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon html"><i class="ri-html5-fill"></i></span>
+                <span class="skill-name">HTML</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon css"><i class="ri-css3-fill"></i></span>
+                <span class="skill-name">CSS</span>
+                <span class="skill-percent">92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="92"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon js"><i class="ri-javascript-fill"></i></span>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon tw"><i class="ri-water-flash-fill"></i></span>
+                <span class="skill-name">Tailwind CSS</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-col reveal">
+            <h4 class="skills-col-title">Tools</h4>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon git"><i class="ri-git-branch-fill"></i></span>
+                <span class="skill-name">Git</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon gh"><i class="ri-github-fill"></i></span>
+                <span class="skill-name">GitHub</span>
+                <span class="skill-percent">87%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="87"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon vs"><i class="ri-terminal-box-fill"></i></span>
+                <span class="skill-name">VS Code</span>
+                <span class="skill-percent">93%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="93"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-icon fig"><i class="ri-pencil-ruler-2-fill"></i></span>
+                <span class="skill-name">Figma</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-head-row reveal">
+          <div>
+            <span class="eyebrow">My Projects</span>
+            <h2 class="section-title">Some Of My Recent Work</h2>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm view-all-btn">View All Projects</a>
+        </div>
+
+        <div class="filter-tabs reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="landing">Landing Pages</button>
+          <button class="filter-btn" data-filter="business">Business Websites</button>
+          <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <div class="project-card reveal" data-category="business">
+            <div class="project-image-wrap">
+              <img src="./assets/projects img/e-commerce-img.png"
+                alt="Ecommerce project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="https://zk-e-commerce.netlify.app/" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/ZK-E-commerce.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ecommerce website</h3>
+              <p>Responsive ecommerce frontend website with modern UI and product showcase.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-category="business">
+            <div class="project-image-wrap">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
+                alt="Restaurant Website project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="#" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="#" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Restaurant Website</h3>
+              <p>Web Design</p>
+              <div class="project-tags">
+                <span>HTML</span><span>Tailwind</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-category="portfolio">
+            <div class="project-image-wrap">
+              <img src="./assets/projects img/netflix-clone.png"
+                alt="Portfolio Website project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="https://mzk-flix-clone.netlify.app" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Netflix-clone.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Netflix Clone</h3>
+              <p>Netflix-inspired streaming platform clone with a modern and fully responsive user interface.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-category="business">
+            <div class="project-image-wrap">
+              <img src="./assets/projects img/khan-luxury-moter-img.png"
+                alt="Agency Website project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="https://luxury-cars-project.netlify.app/" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/HTML-CSS-Cars-Inventory-Project.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Car Inventory Website</h3>
+              <p>Professional multi-page car inventory website built with HTML and CSS.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-category="landing">
+            <div class="project-image-wrap">
+              <img src="./assets/projects img/services-web-img.png"
+                alt="Service web Landing Page project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="https://servixo-services.netlify.app/" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Servixo-HomeServices.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Home Services Landing Page</h3>
+              <p>Responsive landing page for professional home maintenance services.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-category="landing">
+            <div class="project-image-wrap">
+              <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop"
+                alt="Blog Website project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="#" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="#" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Blog Website</h3>
+              <p>Web Design</p>
+              <div class="project-tags">
+                <span>HTML</span><span>JS</span>
+              </div>
+            </div>
+          </div>
+
+           <div class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="./assets/projects img/netflix-clone.png"
+                alt="Netflix Clone project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href="https://mzk-flix-clone.netlify.app" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Netflix-clone.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Netflix Clone</h3>
+              <p>Netflix-inspired streaming platform clone with a modern and fully responsive user interface.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS SECTION ===================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">Testimonials</span>
+          <h2 class="section-title center">What Clients Say</h2>
+        </div>
+
+        <div class="testimonial-slider reveal">
+          <div class="testimonial-track" id="testimonialTrack">
+
+            <div class="testimonial-card active">
+              <i class="ri-double-quotes-l quote-icon"></i>
+              <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                  class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+              <p class="testimonial-text">Ali did an amazing job on our website. He is professional, responsive and
+                delivers high quality work.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                  alt="John Smith">
+                <div>
+                  <strong>John Smith</strong>
+                  <span>Business Owner</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <i class="ri-double-quotes-l quote-icon"></i>
+              <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                  class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+              <p class="testimonial-text">Great communication and excellent work. He understood my requirements
+                perfectly and delivered on time.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop"
+                  alt="Sarah Johnson">
+                <div>
+                  <strong>Sarah Johnson</strong>
+                  <span>Entrepreneur</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <i class="ri-double-quotes-l quote-icon"></i>
+              <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                  class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+              <p class="testimonial-text">Highly recommended. He built a modern and responsive website for my business
+                that exceeded expectations.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
+                  alt="Michael Brown">
+                <div>
+                  <strong>Michael Brown</strong>
+                  <span>Marketing Manager</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="testimonial-dots" id="testimonialDots">
+            <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+            <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+            <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY HIRE ME SECTION ===================== -->
+    <section class="why-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">Why Hire Me</span>
+          <h2 class="section-title center">Built On A Simple Promise</h2>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <i class="ri-code-box-fill"></i>
+            <h3>Clean Code</h3>
+            <p>Readable, maintainable, well-structured code that's easy to extend.</p>
+          </div>
+          <div class="why-card reveal">
+            <i class="ri-rocket-2-fill"></i>
+            <h3>Fast Delivery</h3>
+            <p>Projects delivered on schedule without compromising on quality.</p>
+          </div>
+          <div class="why-card reveal">
+            <i class="ri-smartphone-fill"></i>
+            <h3>Mobile Responsive</h3>
+            <p>Every site works flawlessly across phones, tablets and desktops.</p>
+          </div>
+          <div class="why-card reveal">
+            <i class="ri-search-eye-fill"></i>
+            <h3>SEO Friendly</h3>
+            <p>Semantic structure and performance built in for better rankings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS SECTION ===================== -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">How I Work</span>
+          <h2 class="section-title center">My Work Process</h2>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step reveal">
+            <div class="process-number">01</div>
+            <h3>Requirement Discussion</h3>
+            <p>Understanding your goals, audience and project scope in detail.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">02</div>
+            <h3>Design Planning</h3>
+            <p>Wireframing the structure and planning the visual direction.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">03</div>
+            <h3>Development</h3>
+            <p>Building the website with clean, efficient and scalable code.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">04</div>
+            <h3>Testing</h3>
+            <p>Cross-browser and cross-device testing to catch every issue.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">05</div>
+            <h3>Project Delivery</h3>
+            <p>Final handover with documentation and post-launch support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h2 class="section-title">Let's Talk About Your Project</h2>
+          <p class="contact-desc">Have a project in mind or just want to say hello? Fill out the form or reach me
+            directly through any of the channels below.</p>
+
+          <div class="contact-detail">
+            <i class="ri-mail-line"></i>
+            <div>
+              <span>Email</span>
+              <strong>m.zeeshanKhan.Dev@gmail.com</strong>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="ri-phone-line"></i>
+            <div>
+              <span>Phone</span>
+              <strong>+92 123 4567890</strong>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="ri-map-pin-line"></i>
+            <div>
+              <span>Location</span>
+              <strong>KPK, Pakistan</strong>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="ri-calendar-check-line"></i>
+            <div>
+              <span>Availability</span>
+              <strong>Open for freelance work</strong>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+              required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <i class="ri-send-plane-fill"></i> Send Message
+          </button>
+          <p class="form-success" id="formSuccess">
+            <i class="ri-checkbox-circle-fill"></i> Message sent successfully! I'll get back to you soon.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ===================== CTA SECTION ===================== -->
+    <section class="cta-section">
+      <div class="container cta-banner reveal">
+        <div class="cta-decor cta-decor-1"></div>
+        <div class="cta-decor cta-decor-2"></div>
+        <div class="cta-content">
+          <h2>Have A Project In Mind?</h2>
+          <p>Let's build something amazing together.</p>
+        </div>
+        <a href="#contact" class="btn btn-light">Let's Talk <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">ZK</span>
+          <span class="logo-text">Zeeshan Khan</span>
+        </a>
+        <p>Frontend Developer focused on building modern and responsive websites for clients worldwide.</p>
+        <div class="footer-socials">
+          <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener"><i
+              class="ri-github-fill"></i></a>
+          <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"><i
+              class="ri-linkedin-fill"></i></a>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i
+              class="ri-facebook-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Web Development</a>
+        <a href="#services">Responsive Design</a>
+        <a href="#services">Landing Pages</a>
+        <a href="#services">Website Redesign</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="https://github.com/mzeeshankhan-dev" target="_blank" rel="noopener">My GitHub</a>
+        <a href="assets/zeeshan khan-CV.pdf" download>My Resume</a>
+        <a href="#">Blog</a>
+        <a href="#">UI/UX Design</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Me</h4>
+        <a href="mailto:m.zeeshanKhan.Dev@gmail.com"><i class="ri-mail-line"></i> m.zeeshanKhan.Dev.com</a>
+        <a href="tel:+921234567890"><i class="ri-phone-line"></i> +92 123 4567890</a>
+        <a href="#"><i class="ri-map-pin-line"></i> KPK, Pakistan</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2024 M Zeeshan Khan. All rights reserved.</p>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+          <i class="ri-arrow-up-line"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+/* ============================================================
+   ALI RAZA — PORTFOLIO — MASTER STYLESHEET
+   Imports all modular CSS files
+   ============================================================ */
+
+@import url('./css-files/base.css');
+@import url('./css-files/typography.css');
+@import url('./css-files/navbar.css');
+@import url('./css-files/hero.css');
+@import url('./css-files/trust.css');
+@import url('./css-files/about.css');
+@import url('./css-files/services.css');
+@import url('./css-files/skills.css');
+@import url('./css-files/projects.css');
+@import url('./css-files/testimonials-process.css');
+@import url('./css-files/contact.css');
+@import url('./css-files/footer.css');
+@import url('./css-files/responsive.css');

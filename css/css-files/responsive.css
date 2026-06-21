@@ -1,0 +1,49 @@
+/* ============================================================
+   RESPONSIVE REFINEMENTS
+   Desktop 1440+ / Laptop 1024+ / Tablet 768+ / Mobile 320+
+   ============================================================ */
+
+/* Laptop */
+@media (max-width: 1280px) {
+  .container { padding: 0 30px; }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .about-section,
+  .services-section,
+  .skills-section,
+  .projects-section,
+  .testimonials-section,
+  .why-section,
+  .process-section,
+  .contact-section {
+    padding: 80px 0;
+  }
+
+  .stats-bar { margin-top: 60px; }
+
+  .section-head { margin-bottom: 40px; }
+
+  .navbar-inner { height: 72px; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+
+  .hero-cta { flex-direction: column; width: 100%; }
+  .hero-cta .btn { width: 100%; }
+
+  .section-title { font-size: 1.7rem; }
+
+  .cta-banner { padding: 40px 24px; }
+  .cta-banner .btn { width: 100%; justify-content: center; }
+
+  .logo-text { display: none; }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+  .nav-cta { padding: 10px 16px; font-size: 0.8rem; }
+}
