@@ -164,7 +164,7 @@
 
 .hero-image {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   width: 110%;
   height: 110%;
   object-fit: cover;
@@ -302,7 +302,7 @@
   }
 
   .hero-visual {
-    order: -1;
+    order:-1;
   }
 
   .hero-card {

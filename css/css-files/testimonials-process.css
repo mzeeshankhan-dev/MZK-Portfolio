@@ -7,39 +7,35 @@
   background: var(--bg-panel);
 }
 
-.testimonial-slider {
-  max-width: 720px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.testimonial-track {
-  position: relative;
-  min-height: 280px;
+.swiper {
+  padding-bottom: 50px !important;
 }
 
 .testimonial-card {
-  position: absolute;
-  inset: 0;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  padding: 40px;
+  height: 100%;
+  max-width: 680px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-soft);
-  opacity: 0;
-  transform: translateX(40px) scale(0.97);
   transition: opacity 0.5s ease, transform 0.5s ease;
   pointer-events: none;
 }
 
-.testimonial-card.active {
+.swiper-pagination-bullet {
+  background: white !important;
   opacity: 1;
-  transform: translateX(0) scale(1);
-  pointer-events: auto;
-  position: relative;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: goldenrod !important;
 }
 
 .quote-icon {
@@ -93,26 +89,6 @@
   color: var(--text-muted);
 }
 
-.testimonial-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 28px;
-}
-
-.dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--border-strong);
-  transition: all var(--transition-fast);
-}
-
-.dot.active {
-  width: 28px;
-  border-radius: var(--radius-full);
-  background: var(--accent-gradient);
-}
 
 /* ============================================================
    WHY HIRE ME SECTION
@@ -222,13 +198,48 @@
 }
 
 @media (max-width: 1024px) {
-  .why-grid { grid-template-columns: 1fr 1fr; }
-  .process-timeline { grid-template-columns: 1fr 1fr; }
-  .process-timeline::before { display: none; }
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-timeline::before {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
-  .why-grid { grid-template-columns: 1fr; }
-  .process-timeline { grid-template-columns: 1fr; }
-  .testimonial-card { padding: 28px 22px; }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width:425px) {
+  .testimonial-card {
+    padding: 15px;
+  }
+
+  .quote-icon {
+    margin-bottom: 0;
+  }
+
+  .stars {
+    margin-bottom: 5px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
 }

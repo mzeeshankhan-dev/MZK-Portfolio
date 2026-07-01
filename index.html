@@ -15,21 +15,31 @@
   <meta property="og:type" content="website">
   <meta name="author" content="M Zeeshan Khan">
   <meta property="og:image" content="images/preview.jpg">
+
   <!-- ============ Google Font CDN ===========-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+
   <!-- ============ Remix Icon CDN =============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+
   <!-- ============ Link Style.css ============= -->
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- ============ Link Swiper.js ============ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- ============ Link EmailJS ============== -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 
 <body>
 
-  <!--Top Scroll Progress Bar -->
+  <!-- Top Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Open Loading Animation -->
@@ -118,20 +128,21 @@
             <a href="#projects" class="btn btn-primary">
               <i class="ri-eye-line"></i> View My Work
             </a>
-            <a href="assets/zeeshan-khan-CV.pdf" class="btn btn-outline" download>
+            <a href="./assets/cv file/M. Zeeshan Khan CV.pdf" class="btn btn-outline" download>
               <i class="ri-download-line"></i> Download CV
             </a>
           </div>
 
           <div class="hero-socials fade-in-up" style="--delay:0.4s">
-            <a href="https://github.com/mzeeshankhan-dev" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener"><i
-                class="ri-github-fill"></i></a>
+            <a href="https://github.com/mzeeshankhan-dev" class="social-icon" aria-label="GitHub" target="_blank"
+              rel="noopener"><i class="ri-github-fill"></i></a>
             <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener"><i
                 class="ri-linkedin-fill"></i></a>
             <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener"><i
                 class="ri-facebook-fill"></i></a>
-            <a href="mailto:hellozeeshankhan.com" class="social-icon" aria-label="Email"><i
-                class="ri-mail-fill"></i></a>
+            <a href="https://instagram.com/m.zeeshan.khan5098/" class="social-icon" aria-label="Instagram"
+              target="_blank">
+              <i class="ri-instagram-fill"></i></a>
           </div>
         </div>
 
@@ -140,7 +151,8 @@
 
           <div class="hero-image-wrap fade-in-scale">
             <div class="hero-corve"></div>
-            <img src="./assets/images/client-2-removebg-preview.png" alt="MZK, Frontend Developer" class="hero-image">
+            <img src="./assets/images/developer-img.png" alt="MZK, Frontend Developer" loading="eager"
+              fetchpriority="high" decoding="async" class="hero-image">
 
             <div class="hero-dev-icon">
               <span>
@@ -199,8 +211,8 @@
       <div class="container about-grid">
 
         <div class="about-image-wrap reveal">
-          <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=900&auto=format&fit=crop"
-            alt="zeeshan working on a laptop" class="about-image">
+          <img src="./assets/images/developer-about-img.webp" alt="zeeshan working on a laptop" loading="eager"
+            fetchpriority="high" decoding="async" class="about-image">
           <div class="about-image-glow"></div>
         </div>
 
@@ -438,13 +450,15 @@
 
         <div class="projects-grid" id="projectsGrid">
 
+          <!-- e-commerce project -->
           <div class="project-card reveal" data-category="business">
             <div class="project-image-wrap">
-              <img src="./assets/projects img/e-commerce-img.png"
-                alt="Ecommerce project screenshot" loading="lazy">
+              <img src="./assets/projects img/e-commerce-img.png" alt="Ecommerce project screenshot" loading="lazy">
               <div class="project-overlay">
-                <a href="https://zk-e-commerce.netlify.app/" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="https://github.com/mzeeshankhan-dev/ZK-E-commerce.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://zk-e-commerce.netlify.app/" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/ZK-E-commerce.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
               </div>
             </div>
             <div class="project-info">
@@ -456,49 +470,59 @@
             </div>
           </div>
 
+          <!-- Restauarant project -->
           <div class="project-card reveal" data-category="business">
             <div class="project-image-wrap">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop"
-                alt="Restaurant Website project screenshot" loading="lazy">
+              <img src="./assets/projects img/restaurant-img.png" alt="Restaurant Website project screenshot"
+                loading="lazy">
               <div class="project-overlay">
-                <a href="#" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="#" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://e-o-restaurant.netlify.app/" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Ember-Oak-Restaurant-website.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
               </div>
             </div>
             <div class="project-info">
               <h3>Restaurant Website</h3>
-              <p>Web Design</p>
+              <p>Luxury restaurant website featuring responsive design, smooth animations, and engaging user
+                interactions.</p>
               <div class="project-tags">
-                <span>HTML</span><span>Tailwind</span>
+                <span>HTML</span><span>CSS</span><span>JS</span>
               </div>
             </div>
           </div>
 
+          <!-- Portfolio project -->
           <div class="project-card reveal" data-category="portfolio">
             <div class="project-image-wrap">
-              <img src="./assets/projects img/netflix-clone.png"
-                alt="Portfolio Website project screenshot" loading="lazy">
+              <img src="./assets/projects img/portfolio-img.png" alt="Portfolio Website project screenshot"
+                loading="lazy">
               <div class="project-overlay">
-                <a href="https://mzk-flix-clone.netlify.app" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="https://github.com/mzeeshankhan-dev/Netflix-clone.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+                <a href="#" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/MZK-Portfolio.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
               </div>
             </div>
             <div class="project-info">
-              <h3>Netflix Clone</h3>
-              <p>Netflix-inspired streaming platform clone with a modern and fully responsive user interface.</p>
+              <h3>Portfolio Website</h3>
+              <p>A personal portfolio website designed to highlight a skills, featured projects, and contact information.</p>
               <div class="project-tags">
-                <span>HTML</span><span>CSS</span>
+                <span>HTML</span><span>CSS</span><span>JS</span>
               </div>
             </div>
           </div>
 
+          <!-- khan luxury moter project -->
           <div class="project-card reveal" data-category="business">
             <div class="project-image-wrap">
-              <img src="./assets/projects img/khan-luxury-moter-img.png"
-                alt="Agency Website project screenshot" loading="lazy">
+              <img src="./assets/projects img/khan-luxury-moter-img.png" alt="cars inventory Website project screenshot"
+                loading="lazy">
               <div class="project-overlay">
-                <a href="https://luxury-cars-project.netlify.app/" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="https://github.com/mzeeshankhan-dev/HTML-CSS-Cars-Inventory-Project.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://luxury-cars-project.netlify.app/" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/HTML-CSS-Cars-Inventory-Project.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
               </div>
             </div>
             <div class="project-info">
@@ -510,49 +534,36 @@
             </div>
           </div>
 
+          <!-- Servixo Services project -->
           <div class="project-card reveal" data-category="landing">
             <div class="project-image-wrap">
-              <img src="./assets/projects img/services-web-img.png"
-                alt="Service web Landing Page project screenshot" loading="lazy">
+              <img src="./assets/projects img/services-web-img.png" alt="Service web Landing Page project screenshot"
+                loading="lazy">
               <div class="project-overlay">
-                <a href="https://servixo-services.netlify.app/" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="https://github.com/mzeeshankhan-dev/Servixo-HomeServices.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://servixo-services.netlify.app/" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Servixo-HomeServices.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
               </div>
             </div>
             <div class="project-info">
               <h3>Home Services Landing Page</h3>
               <p>Responsive landing page for professional home maintenance services.</p>
               <div class="project-tags">
-                <span>HTML</span><span>CSS</span><span>js</span>
+                <span>HTML</span><span>CSS</span><span>JS</span>
               </div>
             </div>
           </div>
 
-          <div class="project-card reveal" data-category="landing">
+          <!-- Netflix Clone project -->
+          <div class="project-card reveal">
             <div class="project-image-wrap">
-              <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop"
-                alt="Blog Website project screenshot" loading="lazy">
+              <img src="./assets/projects img/netflix-clone.png" alt="Netflix Clone project screenshot" loading="lazy">
               <div class="project-overlay">
-                <a href="#" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="#" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>Blog Website</h3>
-              <p>Web Design</p>
-              <div class="project-tags">
-                <span>HTML</span><span>JS</span>
-              </div>
-            </div>
-          </div>
-
-           <div class="project-card reveal">
-            <div class="project-image-wrap">
-              <img src="./assets/projects img/netflix-clone.png"
-                alt="Netflix Clone project screenshot" loading="lazy">
-              <div class="project-overlay">
-                <a href="https://mzk-flix-clone.netlify.app" class="project-btn" aria-label="View live demo"><i class="ri-external-link-line"></i></a>
-                <a href="https://github.com/mzeeshankhan-dev/Netflix-clone.git" class="project-btn" aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://mzk-flix-clone.netlify.app" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Netflix-clone.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
               </div>
             </div>
             <div class="project-info">
@@ -560,6 +571,26 @@
               <p>Netflix-inspired streaming platform clone with a modern and fully responsive user interface.</p>
               <div class="project-tags">
                 <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Admain Dashboard poject -->
+          <div class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="./assets/projects img/dashboard-UI-img.png" alt="dashboard project screenshot" loading="lazy">
+              <div class="project-overlay">
+                <a href=" https://servixo-dashboard.netlify.app/" class="project-btn" aria-label="View live demo"><i
+                    class="ri-external-link-line"></i></a>
+                <a href="https://github.com/mzeeshankhan-dev/Servixo-Dashboard.git" class="project-btn"
+                  aria-label="View source on GitHub"><i class="ri-github-fill"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Admin Dashboard</h3>
+              <p>Modern analytics dashboard with responsive layout, interactive elements, and clean user experience.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JS</span>
               </div>
             </div>
           </div>
@@ -576,64 +607,68 @@
           <h2 class="section-title center">What Clients Say</h2>
         </div>
 
-        <div class="testimonial-slider reveal">
-          <div class="testimonial-track" id="testimonialTrack">
+        <div class="swiper reviewsSwiper">
+          <div class="swiper-wrapper">
 
-            <div class="testimonial-card active">
-              <i class="ri-double-quotes-l quote-icon"></i>
-              <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                  class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-              <p class="testimonial-text">Ali did an amazing job on our website. He is professional, responsive and
-                delivers high quality work.</p>
-              <div class="testimonial-author">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
-                  alt="John Smith">
-                <div>
-                  <strong>John Smith</strong>
-                  <span>Business Owner</span>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <i class="ri-double-quotes-l quote-icon"></i>
+                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <p class="testimonial-text">Ali did an amazing job on our website. He is professional, responsive and
+                  delivers high quality work.</p>
+                <div class="testimonial-author">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                    alt="John Smith">
+                  <div>
+                    <strong>John Smith</strong>
+                    <span>Business Owner</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="testimonial-card">
-              <i class="ri-double-quotes-l quote-icon"></i>
-              <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                  class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-              <p class="testimonial-text">Great communication and excellent work. He understood my requirements
-                perfectly and delivered on time.</p>
-              <div class="testimonial-author">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop"
-                  alt="Sarah Johnson">
-                <div>
-                  <strong>Sarah Johnson</strong>
-                  <span>Entrepreneur</span>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <i class="ri-double-quotes-l quote-icon"></i>
+                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <p class="testimonial-text">Great communication and excellent work. He understood my requirements
+                  perfectly and delivered on time.</p>
+                <div class="testimonial-author">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop"
+                    alt="Sarah Johnson">
+                  <div>
+                    <strong>Sarah Johnson</strong>
+                    <span>Entrepreneur</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="testimonial-card">
-              <i class="ri-double-quotes-l quote-icon"></i>
-              <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                  class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-              <p class="testimonial-text">Highly recommended. He built a modern and responsive website for my business
-                that exceeded expectations.</p>
-              <div class="testimonial-author">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
-                  alt="Michael Brown">
-                <div>
-                  <strong>Michael Brown</strong>
-                  <span>Marketing Manager</span>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <i class="ri-double-quotes-l quote-icon"></i>
+                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <p class="testimonial-text">Highly recommended. He built a modern and responsive website for my business
+                  that exceeded expectations.</p>
+                <div class="testimonial-author">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
+                    alt="Michael Brown">
+                  <div>
+                    <strong>Michael Brown</strong>
+                    <span>Marketing Manager</span>
+                  </div>
                 </div>
               </div>
             </div>
 
           </div>
-
-          <div class="testimonial-dots" id="testimonialDots">
-            <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
-            <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
-            <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -723,14 +758,15 @@
             <i class="ri-mail-line"></i>
             <div>
               <span>Email</span>
-              <strong>m.zeeshanKhan.Dev@gmail.com</strong>
+              <a href="mailto:m.zeeshankhan.Dev@gmail.com"
+                target="_blank"><strong>m.zeeshankhan.Dev@gmail.com</strong></a>
             </div>
           </div>
           <div class="contact-detail">
-            <i class="ri-phone-line"></i>
+            <i class="ri-linkedin-fill"></i>
             <div>
-              <span>Phone</span>
-              <strong>+92 123 4567890</strong>
+              <span>Linkedin</span>
+              <a href="https://linkedin.com" target="_blank"><strong>https://linkedin.com</strong></a>
             </div>
           </div>
           <div class="contact-detail">
@@ -813,7 +849,7 @@
           <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"><i
               class="ri-linkedin-fill"></i></a>
           <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i
-              class="ri-facebook-fill"></i></a>
+              class="ri-instagram-fill"></i></a>
         </div>
       </div>
 
@@ -844,8 +880,9 @@
 
       <div class="footer-col">
         <h4>Contact Me</h4>
-        <a href="mailto:m.zeeshanKhan.Dev@gmail.com"><i class="ri-mail-line"></i> m.zeeshanKhan.Dev.com</a>
-        <a href="tel:+921234567890"><i class="ri-phone-line"></i> +92 123 4567890</a>
+        <a href="mailto:m.zeeshankhan.Dev@gmail.com" target="_blank"><i class="ri-mail-line"></i>
+          m.zeeshanKhan.Dev.com</a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-fill"></i> Linkedin</a>
         <a href="#"><i class="ri-map-pin-line"></i> KPK, Pakistan</a>
       </div>
 
@@ -861,6 +898,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

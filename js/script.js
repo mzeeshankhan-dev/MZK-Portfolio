@@ -1,7 +1,3 @@
-/* ============================================================
-   ALI RAZA — PORTFOLIO — MAIN JS
-   Vanilla JavaScript — no dependencies
-   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -264,122 +260,28 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------------------------------------------------
      12. TESTIMONIAL SLIDER (auto-slide)
   --------------------------------------------------------- */
-  const testimonialCards = document.querySelectorAll('.testimonial-card');
-  const dots = document.querySelectorAll('.dot');
-  let activeIndex = 0;
-  let testimonialInterval;
-
-  function showTestimonial(index) {
-    testimonialCards.forEach((card, i) => card.classList.toggle('active', i === index));
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    activeIndex = index;
-  }
-
-  function nextTestimonial() {
-    const next = (activeIndex + 1) % testimonialCards.length;
-    showTestimonial(next);
-  }
-
-  function startTestimonialAutoplay() {
-    testimonialInterval = setInterval(nextTestimonial, 5000);
-  }
-
-  function resetTestimonialAutoplay() {
-    clearInterval(testimonialInterval);
-    startTestimonialAutoplay();
-  }
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      showTestimonial(parseInt(dot.getAttribute('data-index'), 10));
-      resetTestimonialAutoplay();
-    });
-  });
-
-  if (testimonialCards.length) startTestimonialAutoplay();
 
 
-  /* ---------------------------------------------------------
-     13. CONTACT FORM VALIDATION
-  --------------------------------------------------------- */
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
-
-  function setError(inputId, message) {
-    const input = document.getElementById(inputId);
-    const errorEl = document.getElementById(`${inputId}Error`);
-    const group = input.closest('.form-group');
-    if (message) {
-      group.classList.add('error');
-      errorEl.textContent = message;
-    } else {
-      group.classList.remove('error');
-      errorEl.textContent = '';
-    }
-  }
-
-  function validateForm() {
-    let isValid = true;
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (name.length < 2) {
-      setError('name', 'Please enter your full name.');
-      isValid = false;
-    } else {
-      setError('name', '');
-    }
-
-    if (!emailPattern.test(email)) {
-      setError('email', 'Please enter a valid email address.');
-      isValid = false;
-    } else {
-      setError('email', '');
-    }
-
-    if (subject.length < 3) {
-      setError('subject', 'Please enter a subject.');
-      isValid = false;
-    } else {
-      setError('subject', '');
-    }
-
-    if (message.length < 10) {
-      setError('message', 'Message should be at least 10 characters.');
-      isValid = false;
-    } else {
-      setError('message', '');
-    }
-
-    return isValid;
-  }
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      if (validateForm()) {
-        formSuccess.classList.add('show');
-        contactForm.reset();
-        setTimeout(() => formSuccess.classList.remove('show'), 5000);
-      } else {
-        formSuccess.classList.remove('show');
-      }
-    });
-
-    ['name', 'email', 'subject', 'message'].forEach(id => {
-      document.getElementById(id).addEventListener('input', () => setError(id, ''));
+  if (typeof Swiper !== 'undefined') {
+    new Swiper('.reviewsSwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      speed: 700,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      grabCursor: true,
     });
   }
 
 
-  /* ---------------------------------------------------------
-     14. SMOOTH SCROLL FOR ANCHOR LINKS (with navbar offset)
-  --------------------------------------------------------- */
+  /* ------------------------------------------------------
+   14. SMOOTH SCROLL FOR ANCHOR LINKS (with navbar offset)
+  ------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
@@ -393,5 +295,121 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+});
+
+
+/* ---------------------------------------------------------
+   13. CONTACT FORM VALIDATION
+--------------------------------------------------------- */
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+
+function setError(inputId, message) {
+  const input = document.getElementById(inputId);
+  const errorEl = document.getElementById(`${inputId}Error`);
+  const group = input.closest('.form-group');
+  if (message) {
+    group.classList.add('error');
+    errorEl.textContent = message;
+  } else {
+    group.classList.remove('error');
+    errorEl.textContent = '';
+  }
+}
+
+function validateForm() {
+  let isValid = true;
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name.length < 2) {
+    setError('name', 'Please enter your full name.');
+    isValid = false;
+  } else {
+    setError('name', '');
+  }
+
+  if (!emailPattern.test(email)) {
+    setError('email', 'Please enter a valid email address.');
+    isValid = false;
+  } else {
+    setError('email', '');
+  }
+
+  if (subject.length < 3) {
+    setError('subject', 'Please enter a subject.');
+    isValid = false;
+  } else {
+    setError('subject', '');
+  }
+
+  if (message.length < 10) {
+    setError('message', 'Message should be at least 10 characters.');
+    isValid = false;
+  } else {
+    setError('message', '');
+  }
+
+  return isValid;
+}
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      formSuccess.classList.add('show');
+      contactForm.reset();
+      setTimeout(() => formSuccess.classList.remove('show'), 5000);
+    } else {
+      formSuccess.classList.remove('show');
+    }
+  });
+
+  ['name', 'email', 'subject', 'message'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => setError(id, ''));
+  });
+}
+
+
+
+
+/* ---------------------------------------------------------
+   ADD A FORM SUBMIT EMAILJS
+--------------------------------------------------------- */
+emailjs.init({
+  publicKey: "sHIczaeCD4muGgMWs"
+});
+
+const form =
+  document.getElementById("contactForm");
+
+form.addEventListener("submit", (e) => {
+
+  e.preventDefault();
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  emailjs.sendForm(
+    "service_5od68fq",
+    "template_tprll4o",
+    form
+  )
+
+    .then(() => {
+      alert("Message Sent Successfully!");
+      form.reset();
+    })
+    .catch((error) => {
+      alert("Failed To Send Message");
+    });
 
 });
